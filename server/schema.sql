@@ -2,9 +2,9 @@ CREATE DATABASE chat;
 
 USE chat;
 
-CREATE TABLE messages (
-  /* Describe your table here.*/
-);
+CREATE TABLE messages (id INTEGER PRIMARY KEY, username VARCHAR(20), room VARCHAR(20), message VARCHAR(255));
+CREATE TABLE rooms (id INTEGER PRIMARY KEY, name VARCHAR(20));
+CREATE TABLE users (id INTEGER PRIMARY KEY, name VARCHAR(20));
 
 /* Create other tables and define schemas for them here! */
 
