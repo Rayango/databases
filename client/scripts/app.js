@@ -75,14 +75,14 @@ var app = {
         // // Only bother updating the DOM if we have a new message
         // if (mostRecentMessage.objectId !== app.lastMessageId) {
         
-          // Update the UI with the fetched rooms
-          app.renderRoomList(data);
+        // Update the UI with the fetched rooms
+        app.renderRoomList(data);
 
-          // Update the UI with the fetched messages
-          app.renderMessages(data.reverse(), animate);
+        // Update the UI with the fetched messages
+        app.renderMessages(data.reverse(), animate);
 
-          // Store the ID of the most recent message
-          // app.lastMessageId = mostRecentMessage.objectId;
+        // Store the ID of the most recent message
+        // app.lastMessageId = mostRecentMessage.objectId;
         // }
       },
       error: function(error) {
@@ -103,7 +103,6 @@ var app = {
       // Add all fetched messages that are in our current room
       messages
         .filter(function(message) {
-          console.log('boolean...', )
           return message.roomname === app.roomname ||
                  app.roomname === 'lobby' && !message.roomname;
         })
